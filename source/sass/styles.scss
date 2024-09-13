@@ -1,0 +1,241 @@
+@use 'functions' as *;
+@use "sass:math";
+@use "sass:map";
+@use "sass:list";
+
+/* #region Defaults */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+
+  --white: hsl(0, 0%, 100%);
+  --cream: hsl(30, 38%, 92%);
+  --aurometal-saurus: hsl(228, 12%, 48%);
+  --deep-aquamarine: hsl(158, 36%, 37%);
+  --deep-aquamarine-hover: hsl(157, 43%, 18%);
+  --gunmetal: hsl(212, 21%, 14%);
+
+  --ff-head: "Fraunces", serif;
+  --ff-body: "Montserrat", sans-serif;
+
+  --fz-1: calc(32 / 16 * 1rem);
+  --fz-2: calc(14 / 16 * 1rem);
+  --fz-3: calc(12 / 16 * 1rem);
+
+  --s-500: calc(40 / 16 * 1rem);
+  --s-300: calc(24 / 16 * 1rem);
+  --s-200: calc(16 / 16 * 1rem);
+  --s-150: calc(12 / 16 * 1rem);
+  --s-100: calc(8 / 16 * 1rem);
+  --s-50: calc(4 / 16 * 1rem);
+}
+
+*,*::before,*::after {box-sizing: inherit;}
+
+:not(ul, ol, li) {margin: 0;}
+
+body {
+  width: inherit;
+  height: inherit;
+  font-optical-sizing: auto;
+  font-family: var(--ff-body);
+  background-color: var(--cream);
+}
+
+.attribution {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  font-size: rem(11px);
+  text-align: center;
+  color: var(--aurometal-saurus);
+}
+
+.attribution a {
+  transition: .4s;
+  color: var(--gunmetal);
+}
+
+.attribution a:hover,
+.attribution a:visited {
+  color: var(--deep-aquamarine);
+  text-decoration: none;
+}
+/* #endregion Defaults */
+
+/* #region Reusable CSS */
+.grid {
+  display: grid;
+}
+
+.text-display {
+  font-family: var(--ff-head);
+  font-size: var(--fz-1);
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.text-body {
+  font-size: var(--fz-2);
+  font-weight: 500;
+  line-height: em(23px, 14px);
+}
+
+.text-button {
+  font-family: var(--ff-body);
+  font-size: var(--fz-2);
+  font-weight: 700;
+  line-height: auto;
+}
+
+.text-overline {
+  font-size: var(--fz-3);
+  font-weight: 500;
+  line-height: auto;
+  letter-spacing: rem(5px);
+  text-transform: uppercase;
+}
+/* #endregion Reusable CSS */
+
+/* #region Mobile 375px */
+main {
+  width: inherit;
+  height: inherit;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  width: rem(343px);
+  border-radius: rem(10px);
+  overflow: hidden;
+}
+
+.card-img {
+  line-height: 0;
+}
+
+.card-content {
+  background-color: var(--white);
+  padding: var(--s-300);
+  row-gap: rem(18px);
+}
+
+.category {
+  color: var(--aurometal-saurus) ;
+}
+
+.title {
+  color: var(--gunmetal);
+}
+
+.description {
+  color: var(--aurometal-saurus);
+}
+
+.price {
+  grid-auto-flow: column;
+  justify-content: start;
+  column-gap: rem(19px);
+}
+
+.price-new {
+  color: var(--deep-aquamarine);
+}
+
+.price-old {
+  color: var(--aurometal-saurus);
+  font-size: rem(13px);
+  font-weight: 500;
+  line-height: em(13px, 23px);
+  align-self: center;
+  text-decoration: line-through;
+}
+
+.button {
+  height: rem(48px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: var(--s-150);
+  background-color: var(--deep-aquamarine);
+  color: var(--white);
+  border: none;
+  border-radius: var(--s-100);
+  cursor: pointer;
+  transition: background-color .4s;
+}
+/* #endregion Mobile 375px */
+
+/* #region Extra Small 320px */
+@include desktop-media-query(374px) {
+  .card {
+    width: rem(280px);
+  }
+  
+  .card-img {
+    overflow: hidden;
+  }
+  
+  .card-content {
+    row-gap: var(--s-150);
+  }
+  
+  .category {
+    font-size: rem(10px);
+  }
+  
+  .title {
+    font-size: rem(26px);
+  }
+  
+  .description {
+    font-size: rem(12px);
+  }
+  
+  .price {
+    column-gap: rem(14px);
+  }
+  
+  .price-new {
+    font-size: rem(28px);
+  }
+  
+  .price-old {
+    font-size: rem(12px);
+  }
+  
+  .button {
+    column-gap: var(--s-100);
+    padding: rem(10px);
+  }
+}
+/* #endregion Extra Small 320px */
+
+/* #region Desktop 768px */
+@include mobile-media-query(768px) {
+  .card {
+    width: rem(600px);
+    height: rem(450px);
+    grid-auto-flow: column;
+  }
+
+  .card-content {
+    padding: rem(32px);
+  }
+}
+
+/* Desktop Active */
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: var(--deep-aquamarine-hover);
+}  
+
+.button:focus {
+  outline-color: var(--deep-aquamarine);
+}
+/* #endregion Desktop 768px */
