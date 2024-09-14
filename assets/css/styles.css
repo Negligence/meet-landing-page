@@ -1,29 +1,20 @@
-@use 'functions' as *;
-@use "sass:math";
-@use "sass:map";
-@use "sass:list";
-
 /* #region Defaults */
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
-
   --white: hsl(0, 0%, 100%);
   --cream: hsl(30, 38%, 92%);
   --aurometal-saurus: hsl(228, 12%, 48%);
   --deep-aquamarine: hsl(158, 36%, 37%);
   --deep-aquamarine-hover: hsl(157, 43%, 18%);
   --gunmetal: hsl(212, 21%, 14%);
-
   --ff-head: "Fraunces", serif;
   --ff-body: "Montserrat", sans-serif;
-
   --fz-1: calc(32 / 16 * 1rem);
   --fz-2: calc(14 / 16 * 1rem);
   --fz-3: calc(12 / 16 * 1rem);
-
   --s-500: calc(40 / 16 * 1rem);
   --s-300: calc(24 / 16 * 1rem);
   --s-200: calc(16 / 16 * 1rem);
@@ -32,9 +23,13 @@ html {
   --s-50: calc(4 / 16 * 1rem);
 }
 
-*,*::before,*::after {box-sizing: inherit;}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
-:not(ul, ol, li) {margin: 0;}
+:not(ul, ol, li) {
+  margin: 0;
+}
 
 body {
   width: inherit;
@@ -49,13 +44,13 @@ body {
   left: 0;
   right: 0;
   bottom: 1rem;
-  font-size: rem(11px);
+  font-size: 0.6875rem;
   text-align: center;
   color: var(--aurometal-saurus);
 }
 
 .attribution a {
-  transition: .4s;
+  transition: 0.4s;
   color: var(--gunmetal);
 }
 
@@ -64,15 +59,14 @@ body {
   color: var(--deep-aquamarine);
   text-decoration: none;
 }
-/* #endregion Defaults */
 
+/* #endregion Defaults */
 /* #region Reusable CSS */
 .grid {
   display: grid;
 }
 
 /* #endregion Reusable CSS */
-
 /* #region Mobile 375px */
 main {
   width: inherit;
@@ -82,18 +76,8 @@ main {
 }
 
 /* #endregion Mobile 375px */
-
 /* #region Extra Small 320px */
-@include desktop-media-query(374px) {
-  
-}
 /* #endregion Extra Small 320px */
-
 /* #region Desktop 768px */
-@include mobile-media-query(768px) {
-  
-}
-
 /* Desktop Active */
-
 /* #endregion Desktop 768px */

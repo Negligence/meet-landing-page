@@ -1,6 +1,6 @@
-# Frontend Mentor - Product preview card component solution
+# Frontend Mentor - Meet landing page solution
 
-This is a solution to the  [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the  [Meet landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 The root directory here displays the final compiled output, to use the source files for its SASS functions, use the ```source``` folder as your root directory and requires the setup below.
 
@@ -52,8 +52,8 @@ The designs were created to the following widths:
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/Negligence/product-preview-card)
-- Live Site URL: [Github Pages](https://negligence.github.io/product-preview-card/)
+- Solution URL: [Github Repo](https://github.com/Negligence/meet-landing-page)
+- Live Site URL: [Github Pages](https://negligence.github.io/meet-landing-page/)
 
 ## My process
 
