@@ -10,21 +10,28 @@ html {
   height: 100%;
   width: 100%;
 
-  --white: hsl(0, 0%, 100%);
-  --cream: hsl(30, 38%, 92%);
-  --aurometal-saurus: hsl(228, 12%, 48%);
-  --deep-aquamarine: hsl(158, 36%, 37%);
-  --deep-aquamarine-hover: hsl(157, 43%, 18%);
-  --gunmetal: hsl(212, 21%, 14%);
+  --white: hsl(0, 0%, 98%);
+  --slate-300: hsl(240, 10%, 85%);
+  --slate-600: hsl(240, 10%, 57%);
+  --slate-900: hsl(240, 21%, 20%);
+  --purple-300: hsl(268, 100%, 86%);
+  --purple-600: hsl(268, 34%, 53%);
+  --cyan-300: hsl(192, 90%, 77%);
+  --cyan-600: hsl(192, 37%, 48%);
 
-  --ff-head: "Fraunces", serif;
-  --ff-body: "Montserrat", sans-serif;
+  --ff-body: "Red Hat Display", system-ui;
 
   --fz-1: calc(32 / 16 * 1rem);
   --fz-2: calc(14 / 16 * 1rem);
   --fz-3: calc(12 / 16 * 1rem);
 
+  --s-1400: calc(112 / 16 * 1rem);
+  --s-1000: calc(80 / 16 * 1rem);
+  --s-900: calc(72 / 16 * 1rem);
+  --s-800: calc(64 / 16 * 1rem);
+  --s-700: calc(56 / 16 * 1rem);
   --s-500: calc(40 / 16 * 1rem);
+  --s-400: calc(32 / 16 * 1rem);
   --s-300: calc(24 / 16 * 1rem);
   --s-200: calc(16 / 16 * 1rem);
   --s-150: calc(12 / 16 * 1rem);
@@ -41,34 +48,44 @@ body {
   height: inherit;
   font-optical-sizing: auto;
   font-family: var(--ff-body);
-  background-color: var(--cream);
-}
-
-.attribution {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 1rem;
-  font-size: rem(11px);
-  text-align: center;
-  color: var(--aurometal-saurus);
-}
-
-.attribution a {
-  transition: .4s;
-  color: var(--gunmetal);
-}
-
-.attribution a:hover,
-.attribution a:visited {
-  color: var(--deep-aquamarine);
-  text-decoration: none;
+  background-color: var(--white);
 }
 /* #endregion Defaults */
 
 /* #region Reusable CSS */
 .grid {
   display: grid;
+}
+
+.text-preset-1 {
+  font-size: rem(64px);
+  line-height: 1.1em;
+  color: var(--slate-900);
+}
+
+.text-preset-2 {
+  font-size: rem(40px);
+  line-height: 1.1em;
+  color: var(--slate-900);
+}
+
+.text-preset-3 {
+  font-size: rem(16px);
+  line-height: 1.1em;
+  letter-spacing: rem(4px);
+  color: var(--cyan-600);
+}
+
+.text-preset-4 {
+  font-size: rem(18px);
+  line-height: 1.1em;
+  color: var(--slate-900);
+}
+
+.text-preset-5 {
+  font-size: rem(16px);
+  line-height: 1.5em;
+  color: var(--slate-900);
 }
 
 /* #endregion Reusable CSS */
