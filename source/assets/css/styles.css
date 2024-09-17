@@ -8,14 +8,13 @@ html {
   --slate-300: hsl(240, 10%, 85%);
   --slate-600: hsl(240, 10%, 57%);
   --slate-900: hsl(240, 21%, 20%);
+  --purple-hover: hsl(268, 55%, 77%);
   --purple-300: hsl(268, 100%, 86%);
   --purple-600: hsl(268, 34%, 53%);
+  --cyan-hover: hsl(192, 54%, 64%);
   --cyan-300: hsl(192, 90%, 77%);
   --cyan-600: hsl(192, 37%, 48%);
   --ff-body: "Red Hat Display", system-ui;
-  --fz-1: calc(32 / 16 * 1rem);
-  --fz-2: calc(14 / 16 * 1rem);
-  --fz-3: calc(12 / 16 * 1rem);
   --s-1400: calc(112 / 16 * 1rem);
   --s-1000: calc(80 / 16 * 1rem);
   --s-900: calc(72 / 16 * 1rem);
@@ -54,18 +53,21 @@ body {
 
 .text-preset-1 {
   font-size: 4rem;
+  font-weight: 900;
   line-height: 1.1em;
   color: var(--slate-900);
 }
 
 .text-preset-2 {
   font-size: 2.5rem;
+  font-weight: 900;
   line-height: 1.1em;
   color: var(--slate-900);
 }
 
 .text-preset-3 {
   font-size: 1rem;
+  font-weight: 900;
   line-height: 1.1em;
   letter-spacing: 0.25rem;
   color: var(--cyan-600);
@@ -73,14 +75,45 @@ body {
 
 .text-preset-4 {
   font-size: 1.125rem;
+  font-weight: 500;
   line-height: 1.1em;
   color: var(--slate-900);
 }
 
 .text-preset-5 {
   font-size: 1rem;
+  font-weight: 900;
   line-height: 1.5em;
   color: var(--slate-900);
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  border-radius: 1.8125rem;
+  color: var(--white);
+  transition: background-color 0.4s;
+}
+
+.button-blue {
+  background-color: var(--cyan-600);
+}
+.button-blue > span {
+  color: var(--cyan-300);
+}
+.button-blue:hover {
+  background-color: var(--cyan-hover);
+}
+
+.button-purple {
+  background-color: var(--purple-600);
+}
+.button-purple > span {
+  color: var(--purple-300);
+}
+.button-purple:hover {
+  background-color: var(--purple-hover);
 }
 
 /* #endregion Reusable CSS */
