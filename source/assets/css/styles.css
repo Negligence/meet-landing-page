@@ -137,9 +137,9 @@ body {
 
 /* #endregion Reusable CSS */
 /* #region Mobile 375px */
-main {
-  display: grid;
-  place-content: center;
+header {
+  height: 4.75rem;
+  place-items: end center;
 }
 
 /* #endregion Mobile 375px */

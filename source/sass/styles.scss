@@ -150,11 +150,16 @@ body {
 /* #endregion Reusable CSS */
 
 /* #region Mobile 375px */
+header {
+  height: rem(76px);
+  place-items: end center;
+}
+
 main {
   // width: inherit;
   // height: inherit;
-  display: grid;
-  place-content: center;
+  // display: grid;
+  // place-content: center;
 }
 
 /* #endregion Mobile 375px */
