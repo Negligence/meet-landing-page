@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
-
+  
   --white: hsl(0, 0%, 98%);
   --slate-300: hsl(240, 10%, 85%);
   --slate-600: hsl(240, 10%, 57%);
@@ -20,9 +20,15 @@ html {
   --cyan-hover : hsl(192, 54%, 64%);
   --cyan-300: hsl(192, 90%, 77%);
   --cyan-600: hsl(192, 37%, 48%);
-
+  
   --ff-body: "Red Hat Display", system-ui;
-
+  
+  --fz-1: calc(40 / 16 * 1rem);
+  --fz-2: calc(32 / 16 * 1rem);
+  --fz-3: calc(12 / 16 * 1rem);
+  --fz-4: calc(16 / 16 * 1rem);
+  --fz-5: calc(16 / 16 * 1rem);
+  
   --s-1400: calc(112 / 16 * 1rem);
   --s-1000: calc(80 / 16 * 1rem);
   --s-900: calc(72 / 16 * 1rem);
@@ -47,6 +53,7 @@ body {
   font-optical-sizing: auto;
   font-family: var(--ff-body);
   background-color: var(--white);
+  text-align: center;
 }
 /* #endregion Defaults */
 
@@ -56,43 +63,61 @@ body {
 }
 
 .text-preset-1 {
-  font-size: rem(64px);
+  color: var(--slate-900);
+  font-size: var(--fz-1);
   font-weight: 900;
   line-height: 1.1em;
-  color: var(--slate-900);
 }
 
 .text-preset-2 {
-  font-size: rem(40px);
+  color: var(--slate-900);
+  font-size: var(--fz-2);
   font-weight: 900;
   line-height: 1.1em;
-  color: var(--slate-900);
 }
 
 .text-preset-3 {
-  font-size: rem(16px);
+  color: var(--cyan-600);
+  font-size: var(--fz-3);
   font-weight: 900;
   line-height: 1.1em;
   letter-spacing: rem(4px);
-  color: var(--cyan-600);
 }
 
 .text-preset-4 {
-  font-size: rem(18px);
+  color: var(--slate-600);
+  font-size: var(--fz-4);
   font-weight: 500;
-  line-height: 1.1em;
-  color: var(--slate-900);
+  line-height: 1.5em;
 }
 
 .text-preset-5 {
-  font-size: rem(16px);
+  color: var(--white);
+  font-size: var(--fz-5);
   font-weight: 900;
   line-height: 1.5em;
-  color: var(--slate-900);
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    --fz-1: calc(48 / 16 * 1rem);
+    --fz-2: calc(36 / 16 * 1rem);
+    --fz-3: calc(14 / 16 * 1rem);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  html {
+    --fz-1: calc(64 / 16 * 1rem);
+    --fz-2: calc(40 / 16 * 1rem);
+    --fz-3: calc(16 / 16 * 1rem);
+    --fz-4: calc(18 / 16 * 1rem);
+  }
 }
 
 .logo {
-
+  height: rem(76px);
+  place-items: end center;
 }
 
 .button {
@@ -100,17 +125,16 @@ body {
   text-decoration: none;
   padding: rem(16px) rem(40px);
   border-radius: rem(29px);
-  color: var(--white);
   transition: background-color .4s;
 }
 
 .button-blue {
   background-color: var(--cyan-600);
-
+  
   > span {
     color: var(--cyan-300);
   }
-
+  
   &:hover {
     background-color: var(--cyan-hover);
   }
@@ -118,11 +142,11 @@ body {
 
 .button-purple {
   background-color: var(--purple-600);
-
+  
   > span {
     color: var(--purple-300);
   }
-
+  
   &:hover {
     background-color: var(--purple-hover);
   }
@@ -137,7 +161,7 @@ body {
   border-radius: 100vmax;
   border: 1px solid var(--slate-300);
   position: relative;
-
+  
   &::before {
     content: '';
     position: absolute;
@@ -150,17 +174,23 @@ body {
 /* #endregion Reusable CSS */
 
 /* #region Mobile 375px */
-header {
-  height: rem(76px);
-  place-items: end center;
-}
-
 main {
   // width: inherit;
   // height: inherit;
-  // display: grid;
-  // place-content: center;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
+
+.container {
+  width: rem(305px);
+  // padding: rem(32px);
+}
+
+.hero__image {
+  place-items: center;
+}
+
 
 /* #endregion Mobile 375px */
 

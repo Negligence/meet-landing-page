@@ -15,6 +15,11 @@ html {
   --cyan-300: hsl(192, 90%, 77%);
   --cyan-600: hsl(192, 37%, 48%);
   --ff-body: "Red Hat Display", system-ui;
+  --fz-1: calc(40 / 16 * 1rem);
+  --fz-2: calc(32 / 16 * 1rem);
+  --fz-3: calc(12 / 16 * 1rem);
+  --fz-4: calc(16 / 16 * 1rem);
+  --fz-5: calc(16 / 16 * 1rem);
   --s-1400: calc(112 / 16 * 1rem);
   --s-1000: calc(80 / 16 * 1rem);
   --s-900: calc(72 / 16 * 1rem);
@@ -43,6 +48,7 @@ body {
   font-optical-sizing: auto;
   font-family: var(--ff-body);
   background-color: var(--white);
+  text-align: center;
 }
 
 /* #endregion Defaults */
@@ -52,39 +58,59 @@ body {
 }
 
 .text-preset-1 {
-  font-size: 4rem;
+  color: var(--slate-900);
+  font-size: var(--fz-1);
   font-weight: 900;
   line-height: 1.1em;
-  color: var(--slate-900);
 }
 
 .text-preset-2 {
-  font-size: 2.5rem;
+  color: var(--slate-900);
+  font-size: var(--fz-2);
   font-weight: 900;
   line-height: 1.1em;
-  color: var(--slate-900);
 }
 
 .text-preset-3 {
-  font-size: 1rem;
+  color: var(--cyan-600);
+  font-size: var(--fz-3);
   font-weight: 900;
   line-height: 1.1em;
   letter-spacing: 0.25rem;
-  color: var(--cyan-600);
 }
 
 .text-preset-4 {
-  font-size: 1.125rem;
+  color: var(--slate-600);
+  font-size: var(--fz-4);
   font-weight: 500;
-  line-height: 1.1em;
-  color: var(--slate-900);
+  line-height: 1.5em;
 }
 
 .text-preset-5 {
-  font-size: 1rem;
+  color: var(--white);
+  font-size: var(--fz-5);
   font-weight: 900;
   line-height: 1.5em;
-  color: var(--slate-900);
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    --fz-1: calc(48 / 16 * 1rem);
+    --fz-2: calc(36 / 16 * 1rem);
+    --fz-3: calc(14 / 16 * 1rem);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  html {
+    --fz-1: calc(64 / 16 * 1rem);
+    --fz-2: calc(40 / 16 * 1rem);
+    --fz-3: calc(16 / 16 * 1rem);
+    --fz-4: calc(18 / 16 * 1rem);
+  }
+}
+.logo {
+  height: 4.75rem;
+  place-items: end center;
 }
 
 .button {
@@ -92,7 +118,6 @@ body {
   text-decoration: none;
   padding: 1rem 2.5rem;
   border-radius: 1.8125rem;
-  color: var(--white);
   transition: background-color 0.4s;
 }
 
@@ -137,9 +162,18 @@ body {
 
 /* #endregion Reusable CSS */
 /* #region Mobile 375px */
-header {
-  height: 4.75rem;
-  place-items: end center;
+main {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 19.0625rem;
+}
+
+.hero__image {
+  place-items: center;
 }
 
 /* #endregion Mobile 375px */
