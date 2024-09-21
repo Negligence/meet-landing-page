@@ -48,7 +48,7 @@ body {
   font-optical-sizing: auto;
   font-family: var(--ff-body);
   background-color: var(--white);
-  text-align: center;
+  overflow-x: hidden;
 }
 
 /* #endregion Defaults */
@@ -111,7 +111,7 @@ body {
 .button {
   display: inline-block;
   text-decoration: none;
-  padding: 1rem 2.5rem;
+  padding: var(--s-200) var(--s-500);
   border-radius: 1.8125rem;
   transition: background-color 0.4s;
 }
@@ -140,18 +140,19 @@ body {
   display: grid;
   place-items: center;
   color: var(--slate-600);
-  width: 3.5rem;
-  height: 3.5rem;
+  width: var(--s-700);
+  height: var(--s-700);
   border-radius: 100vmax;
-  border: 1px solid var(--slate-300);
+  border: 0.0625rem solid var(--slate-300);
   position: relative;
+  margin-block-start: var(--s-1000);
 }
 .number::before {
   content: "";
   position: absolute;
   top: -150%;
   width: 0.0625rem;
-  height: 5rem;
+  height: var(--s-1000);
   background-color: var(--slate-300);
 }
 
@@ -168,10 +169,14 @@ header {
   row-gap: 3rem;
 }
 
+.container {
+  text-align: center;
+}
+
 .hero__image {
   grid-auto-flow: column;
   column-gap: 1.05625rem;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .hero__content {
@@ -181,6 +186,32 @@ header {
 .hero__buttons {
   place-items: center;
   row-gap: var(--s-200);
+}
+
+.main {
+  padding: var(--s-400) var(--s-300) var(--s-800);
+}
+
+.main__content {
+  row-gap: var(--s-800);
+  place-items: center;
+}
+
+.main__images {
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-200);
+}
+
+.main__img {
+  border-radius: var(--s-100);
+}
+
+.main__text {
+  row-gap: var(--s-200);
+}
+
+.main__title {
+  margin-block-end: var(--s-200);
 }
 
 /* #endregion Mobile 375px */
