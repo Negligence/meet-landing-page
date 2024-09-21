@@ -116,8 +116,7 @@ body {
 }
 
 .logo {
-  height: rem(76px);
-  place-items: end center;
+
 }
 
 .button {
@@ -174,23 +173,51 @@ body {
 /* #endregion Reusable CSS */
 
 /* #region Mobile 375px */
+header {
+  height: rem(76px);
+  place-items: end center;
+}
+
 main {
   // width: inherit;
   // height: inherit;
-  display: grid;
+  // display: grid;
+  // place-items: center;
+  // overflow: hidden;
+}
+
+.hero {
   place-items: center;
-  overflow: hidden;
+  padding: var(--s-800) var(--s-300) var(--s-400);
+  row-gap: rem(48px);
 }
 
 .container {
-  width: rem(305px);
-  // padding: rem(32px);
+
 }
 
 .hero__image {
-  place-items: center;
+  grid-auto-flow: column;
+  column-gap: rem(16.9px);
+  overflow: hidden;
 }
 
+.hero__img {
+
+}
+
+.hero__content {
+  row-gap: var(--s-300);
+}
+
+.hero__description {
+
+}
+
+.hero__buttons {
+  place-items: center;
+  row-gap: var(--s-200);
+}
 
 /* #endregion Mobile 375px */
 
