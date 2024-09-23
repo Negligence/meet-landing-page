@@ -20,6 +20,7 @@ html {
   --cyan-hover : hsl(192, 54%, 64%);
   --cyan-300: hsl(192, 90%, 77%);
   --cyan-600: hsl(192, 37%, 48%);
+  --cyan-600-overlay: hsla(192, 37%, 48%, .8);
   
   --ff-body: "Red Hat Display", system-ui;
   
@@ -120,8 +121,9 @@ body {
 }
 
 .button {
-  display: inline-block;
+  display: inline-flex;
   text-decoration: none;
+  column-gap: var(--s-50);
   padding: var(--s-200) var(--s-500);
   border-radius: rem(29px);
   transition: background-color .4s;
@@ -257,7 +259,44 @@ main {
 
 }
 
+.footer {
+  place-items: center;
+}
 
+.footer__content {
+  position: relative;
+  place-items: center;
+  row-gap: var(--s-300);
+  margin-block-start: rem(108px);
+  padding: var(--s-800) var(--s-300);
+  height: rem(392px);
+  background-image: url(../images/mobile/image-footer.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cyan-600-overlay);
+  }
+
+  > .number {
+    position: absolute;
+    bottom: calc(100% - var(--s-700)/2);
+    background-color: var(--white);
+  } 
+}
+
+.footer__title,
+.footer__description,
+.footer__button {
+  color: var(--white);
+  z-index: 1;
+}
 /* #endregion Mobile 375px */
 
 /* #region Extra Small 320px */
