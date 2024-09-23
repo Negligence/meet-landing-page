@@ -169,6 +169,7 @@ header {
   place-items: center;
   padding: var(--s-800) var(--s-300) var(--s-400);
   row-gap: 3rem;
+  overflow-x: hidden;
 }
 
 .container {
