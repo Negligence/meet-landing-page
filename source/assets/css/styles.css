@@ -212,6 +212,10 @@ header {
   row-gap: var(--s-200);
 }
 
+.main__subtitle {
+  text-transform: uppercase;
+}
+
 .main__title {
   margin-block-end: var(--s-200);
 }
@@ -256,6 +260,21 @@ header {
 
 /* #endregion Mobile 375px */
 /* #region Extra Small 320px */
+@media only screen and (max-width: 23.375em) {
+  .hero {
+    padding: var(--s-700) var(--s-200) var(--s-300);
+    row-gap: 3rem;
+  }
+  .main {
+    padding: var(--s-300) var(--s-200) var(--s-700);
+  }
+  .main__img {
+    height: 7.5rem;
+  }
+  .footer__content {
+    padding: var(--s-700) var(--s-200);
+  }
+}
 /* #endregion Extra Small 320px */
 /* #region Desktop 768px */
 /* Desktop Active */

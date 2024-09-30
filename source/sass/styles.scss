@@ -248,7 +248,7 @@ main {
 }
 
 .main__subtitle {
-
+  text-transform: uppercase;
 }
 
 .main__title {
@@ -302,7 +302,22 @@ main {
 
 /* #region Extra Small 320px */
 @include desktop-media-query(374px) {
+  .hero {
+    padding: var(--s-700) var(--s-200) var(--s-300);
+    row-gap: rem(48px);
+  }
   
+  .main {
+    padding: var(--s-300) var(--s-200) var(--s-700);
+  }
+  
+  .main__img {
+    height: rem(120px);
+  }
+
+  .footer__content {
+    padding: var(--s-700) var(--s-200);
+  }  
 }
 /* #endregion Extra Small 320px */
 
