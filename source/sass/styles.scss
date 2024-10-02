@@ -202,6 +202,10 @@ main {
   grid-auto-flow: column;
   column-gap: rem(16.9px);
   overflow-x: hidden;
+
+  > [src*=desktop] {
+    display: none;
+  }
 }
 
 .hero__img {

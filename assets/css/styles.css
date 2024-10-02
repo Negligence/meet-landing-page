@@ -180,6 +180,9 @@ header {
   column-gap: 1.05625rem;
   overflow-x: hidden;
 }
+.hero__image > [src*=desktop] {
+  display: none;
+}
 
 .hero__content {
   row-gap: var(--s-300);
