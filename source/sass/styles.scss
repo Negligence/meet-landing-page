@@ -199,8 +199,6 @@ main {
 }
 
 .hero__image {
-  grid-auto-flow: column;
-  column-gap: rem(16.9px);
   overflow-x: hidden;
 
   > [src*=desktop] {
@@ -209,7 +207,7 @@ main {
 }
 
 .hero__img {
-
+  height: clamp(10rem, 1.4719rem + 36.3868vw, 18.9375rem);
 }
 
 .hero__content {
@@ -327,7 +325,114 @@ main {
 
 /* #region Desktop 768px */
 @include mobile-media-query(768px) {
+  .hero {
+    padding: var(--s-800) rem(44px);
+    row-gap: rem(72px);
+  }
   
+  .container {
+
+  }
+  
+  .hero__image {
+    overflow-x: hidden;
+  }
+  
+  .hero__img {
+
+  }
+  
+  .hero__content {
+    width: rem(448px);
+  }
+  
+  .hero__title {
+  
+  }
+  
+  .hero__description {
+  
+  }
+  
+  .hero__buttons {
+    grid-auto-flow: column;
+    place-content: center;
+    column-gap: rem(17px);
+  }
+  
+  .main {
+    padding: var(--s-400) var(--s-300) var(--s-800);
+  }
+  
+  .main__content {
+    row-gap: var(--s-800);
+    place-items: center;
+  }
+  
+  .main__images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-200);
+  }
+  
+  .main__img {
+    border-radius: var(--s-100);
+  }
+  
+  .main__text {
+    row-gap: var(--s-200);
+  }
+  
+  .main__subtitle {
+    text-transform: uppercase;
+  }
+  
+  .main__title {
+    margin-block-end: var(--s-200);
+  }
+  
+  .main__description {
+  
+  }
+  
+  .footer {
+    place-items: center;
+  }
+  
+  .footer__content {
+    position: relative;
+    place-items: center;
+    row-gap: var(--s-300);
+    margin-block-start: rem(108px);
+    padding: var(--s-800) var(--s-300);
+    width: 100%;
+    height: rem(392px);
+    background-image: url(../images/mobile/image-footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--cyan-600-overlay);
+    }
+  
+    > .number {
+      position: absolute;
+      bottom: calc(100% - var(--s-700)/2);
+      background-color: var(--white);
+    } 
+  }
+  
+  .footer__title,
+  .footer__description,
+  .footer__button {
+    color: var(--white);
+    z-index: 1;
+  }
 }
 
 /* Desktop Active */
