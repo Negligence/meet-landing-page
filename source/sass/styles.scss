@@ -30,11 +30,16 @@ html {
   --fz-4: calc(16 / 16 * 1rem);
   --fz-5: calc(16 / 16 * 1rem);
   
+  --s-1500: calc(120 / 16 * 1rem);
   --s-1400: calc(112 / 16 * 1rem);
+  --s-1300: calc(104 / 16 * 1rem);
+  --s-1200: calc(96 / 16 * 1rem);
+  --s-1100: calc(88 / 16 * 1rem);
   --s-1000: calc(80 / 16 * 1rem);
   --s-900: calc(72 / 16 * 1rem);
   --s-800: calc(64 / 16 * 1rem);
   --s-700: calc(56 / 16 * 1rem);
+  --s-600: calc(48 / 16 * 1rem);
   --s-500: calc(40 / 16 * 1rem);
   --s-400: calc(32 / 16 * 1rem);
   --s-300: calc(24 / 16 * 1rem);
@@ -82,7 +87,7 @@ body {
   font-size: var(--fz-3);
   font-weight: 900;
   line-height: 1.1em;
-  letter-spacing: rem(4px);
+  letter-spacing: var(--s-50);
 }
 
 .text-preset-4 {
@@ -191,7 +196,7 @@ main {
 .hero {
   place-items: center;
   padding: var(--s-800) var(--s-300) var(--s-400);
-  row-gap: rem(48px);
+  row-gap: var(--s-600);
 }
 
 .container {
@@ -219,7 +224,7 @@ main {
 }
 
 .hero__description {
-
+  max-width: rem(448px);
 }
 
 .hero__buttons {
@@ -247,6 +252,7 @@ main {
 
 .main__text {
   row-gap: var(--s-200);
+  max-width: rem(504px);
 }
 
 .main__subtitle {
@@ -306,7 +312,7 @@ main {
 @include desktop-media-query(374px) {
   .hero {
     padding: var(--s-700) var(--s-200) var(--s-300);
-    row-gap: rem(48px);
+    row-gap: var(--s-600);
   }
   
   .main {
@@ -314,7 +320,7 @@ main {
   }
   
   .main__img {
-    height: rem(120px);
+    height: var(--s-1500);
   }
 
   .footer__content {
@@ -327,7 +333,7 @@ main {
 @include mobile-media-query(768px) {
   .hero {
     padding: var(--s-800) rem(44px);
-    row-gap: rem(72px);
+    row-gap: var(--s-900);
   }
   
   .container {
@@ -343,7 +349,7 @@ main {
   }
   
   .hero__content {
-    width: rem(448px);
+
   }
   
   .hero__title {
@@ -361,17 +367,15 @@ main {
   }
   
   .main {
-    padding: var(--s-400) var(--s-300) var(--s-800);
+    padding: var(--s-700) rem(44px) var(--s-800);
   }
   
   .main__content {
-    row-gap: var(--s-800);
-    place-items: center;
   }
   
   .main__images {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--s-200);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s-300);
   }
   
   .main__img {
