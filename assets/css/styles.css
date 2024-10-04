@@ -273,6 +273,10 @@ header {
   z-index: 1;
 }
 
+.footer__description {
+  max-width: 504px;
+}
+
 /* #endregion Mobile 375px */
 /* #region Extra Small 320px */
 @media only screen and (max-width: 23.375em) {
@@ -296,9 +300,6 @@ header {
   .hero {
     padding: var(--s-800) 2.75rem;
     row-gap: var(--s-900);
-  }
-  .hero__image {
-    overflow-x: hidden;
   }
   .hero__buttons {
     grid-auto-flow: column;
@@ -334,11 +335,9 @@ header {
     margin-block-start: 6.75rem;
     padding: var(--s-800) var(--s-300);
     width: 100%;
-    height: 24.5rem;
-    background-image: url(../images/mobile/image-footer.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: 20rem;
+    background-image: url(../images/tablet/image-footer.jpg);
+    background-position: top center;
   }
   .footer__content::before {
     content: "";

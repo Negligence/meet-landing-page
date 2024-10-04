@@ -306,6 +306,10 @@ main {
   color: var(--white);
   z-index: 1;
 }
+
+.footer__description {
+  max-width: 504px;
+}
 /* #endregion Mobile 375px */
 
 /* #region Extra Small 320px */
@@ -341,7 +345,7 @@ main {
   }
   
   .hero__image {
-    overflow-x: hidden;
+
   }
   
   .hero__img {
@@ -409,11 +413,9 @@ main {
     margin-block-start: rem(108px);
     padding: var(--s-800) var(--s-300);
     width: 100%;
-    height: rem(392px);
-    background-image: url(../images/mobile/image-footer.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: rem(320px);
+    background-image: url(../images/tablet/image-footer.jpg);
+    background-position: top center;
   
     &::before {
       content: '';
