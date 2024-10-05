@@ -106,7 +106,7 @@ body {
     --fz-3: calc(14 / 16 * 1rem);
   }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1150px) {
   html {
     --fz-1: calc(64 / 16 * 1rem);
     --fz-2: calc(40 / 16 * 1rem);
@@ -166,7 +166,7 @@ body {
 /* #endregion Reusable CSS */
 /* #region Mobile 375px */
 header {
-  height: 4.75rem;
+  height: clamp(4.75rem, 2.4643rem + 4.7619vw, 6.75rem);
   place-items: end center;
 }
 
@@ -274,7 +274,7 @@ header {
 }
 
 .footer__description {
-  max-width: 504px;
+  max-width: 31.5rem;
 }
 
 /* #endregion Mobile 375px */
@@ -295,7 +295,7 @@ header {
   }
 }
 /* #endregion Extra Small 320px */
-/* #region Desktop 768px */
+/* #region Tablet 768px */
 @media only screen and (min-width: 48em) {
   .hero {
     padding: var(--s-800) 2.75rem;
@@ -313,51 +313,47 @@ header {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--s-300);
   }
-  .main__img {
-    border-radius: var(--s-100);
-  }
-  .main__text {
-    row-gap: var(--s-200);
-  }
-  .main__subtitle {
-    text-transform: uppercase;
-  }
-  .main__title {
-    margin-block-end: var(--s-200);
-  }
-  .footer {
-    place-items: center;
-  }
   .footer__content {
-    position: relative;
-    place-items: center;
-    row-gap: var(--s-300);
-    margin-block-start: 6.75rem;
-    padding: var(--s-800) var(--s-300);
-    width: 100%;
     height: 20rem;
     background-image: url(../images/tablet/image-footer.jpg);
     background-position: top center;
   }
-  .footer__content::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--cyan-600-overlay);
+}
+/* #endregion Tablet 768px */
+/* #region Desktop 1150px */
+@media only screen and (min-width: 71.875em) {
+  .hero {
+    padding: var(--s-800) 2.75rem;
+    row-gap: var(--s-900);
   }
-  .footer__content > .number {
-    position: absolute;
-    bottom: calc(100% - var(--s-700) / 2);
-    background-color: var(--white);
+  .hero__buttons {
+    grid-auto-flow: column;
+    place-content: center;
+    column-gap: 1.0625rem;
   }
-  .footer__title,
-  .footer__description,
-  .footer__button {
-    color: var(--white);
-    z-index: 1;
+  .main {
+    padding: var(--s-700) 2.75rem var(--s-800);
+  }
+  .main__images {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s-300);
+  }
+  .footer {
+    text-align: initial;
+  }
+  .footer__content {
+    grid-auto-flow: column;
+    place-items: center;
+    height: 20rem;
+    background-image: url(../images/desktop/image-footer.jpg);
+    background-position: top center;
+  }
+  .footer__title {
+    width: 22.1875rem;
+  }
+  .footer__description {
+    width: 22.1875rem;
   }
 }
-/* Desktop Active */
-/* #endregion Desktop 768px */
+/* #endregion Desktop 1150px */
+/* Active State */
