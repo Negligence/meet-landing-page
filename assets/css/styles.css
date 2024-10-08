@@ -183,12 +183,12 @@ header {
 .hero__image {
   overflow-x: hidden;
 }
-.hero__image > [src*=desktop] {
-  display: none;
-}
 
 .hero__img {
   height: clamp(10rem, 1.4719rem + 36.3868vw, 18.9375rem);
+}
+.hero__img[src*=desktop] {
+  display: none;
 }
 
 .hero__content {
@@ -320,16 +320,30 @@ header {
   }
 }
 /* #endregion Tablet 768px */
-/* #region Desktop 1150px */
-@media only screen and (min-width: 71.875em) {
+/* #region Desktop 1200px */
+@media only screen and (min-width: 75em) {
   .hero {
-    padding: var(--s-800) 2.75rem;
-    row-gap: var(--s-900);
-  }
-  .hero__buttons {
+    max-width: 85.125rem;
     grid-auto-flow: column;
-    place-content: center;
-    column-gap: 1.0625rem;
+    margin-inline: auto;
+    position: relative;
+  }
+  .hero__image {
+    display: none;
+  }
+  .hero__img[src*=desktop] {
+    position: absolute;
+    display: block;
+    height: clamp(18.9375rem, 1.125rem + 23.75vw, 22.5rem);
+  }
+  .hero__img[src*=left] {
+    left: clamp(-4.875rem, -14.625rem - 21.6667vw, -1.625rem);
+  }
+  .hero__img[src*=right] {
+    right: clamp(-4.875rem, -14.625rem - 21.6667vw, -1.625rem);
+  }
+  .hero__content {
+    row-gap: var(--s-400);
   }
   .main {
     padding: var(--s-700) 2.75rem var(--s-800);
@@ -346,7 +360,6 @@ header {
     place-items: center;
     height: 20rem;
     background-image: url(../images/desktop/image-footer.jpg);
-    background-position: top center;
   }
   .footer__title {
     width: 22.1875rem;
@@ -355,5 +368,4 @@ header {
     width: 22.1875rem;
   }
 }
-/* #endregion Desktop 1150px */
-/* Active State */
+/* #endregion Desktop 1200px */
