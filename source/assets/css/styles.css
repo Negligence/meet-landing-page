@@ -99,14 +99,14 @@ body {
   line-height: 1.5em;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   html {
     --fz-1: calc(48 / 16 * 1rem);
     --fz-2: calc(36 / 16 * 1rem);
     --fz-3: calc(14 / 16 * 1rem);
   }
 }
-@media only screen and (min-width: 1150px) {
+@media only screen and (min-width: 71.875em) {
   html {
     --fz-1: calc(64 / 16 * 1rem);
     --fz-2: calc(40 / 16 * 1rem);
@@ -224,7 +224,7 @@ header {
 
 .main__text {
   row-gap: var(--s-200);
-  max-width: 31.5rem;
+  max-width: 34rem;
 }
 
 .main__subtitle {
@@ -307,7 +307,7 @@ header {
     column-gap: 1.0625rem;
   }
   .main {
-    padding: var(--s-700) 2.75rem var(--s-800);
+    padding: var(--s-700) var(--s-400) var(--s-800);
   }
   .main__images {
     grid-template-columns: repeat(4, 1fr);
@@ -320,8 +320,8 @@ header {
   }
 }
 /* #endregion Tablet 768px */
-/* #region Desktop 1200px */
-@media only screen and (min-width: 75em) {
+/* #region Desktop 1150px */
+@media only screen and (min-width: 71.875em) {
   .hero {
     max-width: 85.125rem;
     grid-auto-flow: column;
@@ -346,11 +346,14 @@ header {
     row-gap: var(--s-400);
   }
   .main {
-    padding: var(--s-700) 2.75rem var(--s-800);
+    padding: var(--s-700) var(--s-1000) var(--s-900);
   }
   .main__images {
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--s-300);
+    gap: var(--s-400);
+  }
+  .main__img {
+    height: clamp(11.5rem, -6.3448rem + 24.8276vw, 16rem);
+    width: clamp(11.5rem, -6.3448rem + 24.8276vw, 16rem);
   }
   .footer {
     text-align: initial;
@@ -368,4 +371,4 @@ header {
     width: 22.1875rem;
   }
 }
-/* #endregion Desktop 1200px */
+/* #endregion Desktop 1150px */
