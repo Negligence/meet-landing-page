@@ -360,12 +360,12 @@ header {
   }
   .footer__content {
     grid-auto-flow: column;
-    place-items: center;
-    height: 20rem;
+    place-content: space-evenly;
+    height: 19.5rem;
     background-image: url(../images/desktop/image-footer.jpg);
   }
   .footer__title {
-    width: 22.1875rem;
+    width: 20.625rem;
   }
   .footer__description {
     width: 22.1875rem;
