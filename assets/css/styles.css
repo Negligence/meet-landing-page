@@ -327,6 +327,7 @@ header {
     grid-auto-flow: column;
     margin-inline: auto;
     position: relative;
+    padding: var(--s-1500) 2.75rem;
   }
   .hero__image {
     display: none;
@@ -338,9 +339,11 @@ header {
   }
   .hero__img[src*=left] {
     left: clamp(-4.875rem, -14.625rem - 21.6667vw, -1.625rem);
+    transform: translateY(-10%);
   }
   .hero__img[src*=right] {
     right: clamp(-4.875rem, -14.625rem - 21.6667vw, -1.625rem);
+    transform: translateY(10%);
   }
   .hero__content {
     row-gap: var(--s-400);
@@ -357,6 +360,8 @@ header {
   }
   .footer {
     text-align: initial;
+    max-width: 120rem;
+    margin-inline: auto;
   }
   .footer__content {
     grid-auto-flow: column;

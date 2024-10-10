@@ -42,6 +42,7 @@ The designs were created to the following widths:
 
 - Extra Small: 320px
 - Mobile: 375px
+- Tablet: 768px
 - Desktop: 1440px
 
 ### Screenshot
@@ -71,97 +72,11 @@ The designs were created to the following widths:
 I learned to tweak and rename the design containers in figma to make it easier to translate it to html code structure.
 
 ```html
-<article class="card grid">
-
-  <div class="card-img">
-    <img src="./assets/images/image-product-mobile.jpg" alt="Mobile Image" width="343" height="240">
-    <img src="./assets/images/image-product-desktop.jpg" alt="Desktop Image">
-  </div>
-
-  <div class="card-content grid">
-
-    <span class="category text-overline">Perfume</span>
-    
-    <h1 class="title text-display">Gabrielle Essence Eau De Parfum</h1>
-    
-    <p class="description text-body">
-      A floral, solar and voluptuous interpretation composed by Olivier Polge,
-      Perfumer-Creator for the House of CHANEL.
-    </p>
-    
-    <div class="price grid">
-      <span class="price-new text-display">$149.99</span>
-      <span class="price-old">$169.99</span>
-    </div>
-    
-    <button class="button text-button">
-      <img src="./assets/images/icon-cart.svg" alt="Cart Icon">
-      Add to Cart
-    </button>
-    
-  </div>
-  
-</article>
 ```
 
 I also found it handy to create classes based on the figma design local styles.
 
 ```scss
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  height: 100%;
-  width: 100%;
-
-  --white: hsl(0, 0%, 100%);
-  --cream: hsl(30, 38%, 92%);
-  --aurometal-saurus: hsl(228, 12%, 48%);
-  --deep-aquamarine: hsl(158, 36%, 37%);
-  --deep-aquamarine-hover: hsl(157, 43%, 18%);
-  --gunmetal: hsl(212, 21%, 14%);
-
-  --ff-head: "Fraunces", serif;
-  --ff-body: "Montserrat", sans-serif;
-
-  --fz-1: calc(32 / 16 * 1rem);
-  --fz-2: calc(14 / 16 * 1rem);
-  --fz-3: calc(12 / 16 * 1rem);
-
-  --s-500: calc(40 / 16 * 1rem);
-  --s-300: calc(24 / 16 * 1rem);
-  --s-200: calc(16 / 16 * 1rem);
-  --s-150: calc(12 / 16 * 1rem);
-  --s-100: calc(8 / 16 * 1rem);
-  --s-50: calc(4 / 16 * 1rem);
-}
-
-.text-display {
-  font-family: var(--ff-head);
-  font-size: var(--fz-1);
-  font-weight: 700;
-  line-height: 1em;
-}
-
-.text-body {
-  font-size: var(--fz-2);
-  font-weight: 500;
-  line-height: em(23px, 14px);
-}
-
-.text-button {
-  font-family: var(--ff-body);
-  font-size: var(--fz-2);
-  font-weight: 700;
-  line-height: auto;
-}
-
-.text-overline {
-  font-size: var(--fz-3);
-  font-weight: 500;
-  line-height: auto;
-  letter-spacing: rem(5px);
-  text-transform: uppercase;
-}
 ```
 
 ### Continued development

@@ -351,8 +351,9 @@ header {
     grid-auto-flow: column;
     margin-inline: auto;
     position: relative;
+    padding: var(--s-1500) rem(44px);
   }
-  
+
   .hero__image {
     display: none;
   }
@@ -366,10 +367,12 @@ header {
 
     &[src*=left] {
       left: clamp(-4.875rem, -14.625rem + -21.6667vw, -1.625rem);
+      transform: translateY(-10%);
     }
-
+    
     &[src*=right] {
       right: clamp(-4.875rem, -14.625rem + -21.6667vw, -1.625rem);
+      transform: translateY(10%);
     }
   }
   
@@ -392,6 +395,8 @@ header {
   
   .footer {
     text-align: initial;
+    max-width: rem(1920px);
+    margin-inline: auto;
   }
   
   .footer__content {
