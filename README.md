@@ -47,9 +47,9 @@ The designs were created to the following widths:
 
 ### Screenshot
 
-| ![Mobile](./source/screenshots/mobile.png) | ![Desktop](./source/screenshots/desktop.png) | ![Desktop Active](./source/screenshots/desktop-active.png) |
-| ------- | ------- | -              |
-| Mobile  | Desktop | Desktop Active |
+| ![Mobile](./source/screenshots/mobile.png) | ![Tablet](./source/screenshots/tablet.png) | ![Desktop](./source/screenshots/desktop.png) | ![Desktop Active](./source/screenshots/desktop-active.png) |
+| ------- | ------- | ------- | -              |
+| Mobile  | Tablet  | Desktop | Desktop Active |
 
 ### Links
 
@@ -69,14 +69,47 @@ The designs were created to the following widths:
 
 ### What I learned
 
-I learned to tweak and rename the design containers in figma to make it easier to translate it to html code structure.
+I learned that SCSS functions do not work inside CSS custom property values, and to use CSS custom properties to save preset spacings.
 
-```html
+```css
+--s-1500: calc(120 / 16 * 1rem);
+--s-1400: calc(112 / 16 * 1rem);
+--s-1300: calc(104 / 16 * 1rem);
+--s-1200: calc(96 / 16 * 1rem);
+--s-1100: calc(88 / 16 * 1rem);
+--s-1000: calc(80 / 16 * 1rem);
+--s-900: calc(72 / 16 * 1rem);
+--s-800: calc(64 / 16 * 1rem);
+--s-700: calc(56 / 16 * 1rem);
+--s-600: calc(48 / 16 * 1rem);
+--s-500: calc(40 / 16 * 1rem);
+--s-400: calc(32 / 16 * 1rem);
+--s-300: calc(24 / 16 * 1rem);
+--s-200: calc(16 / 16 * 1rem);
+--s-150: calc(12 / 16 * 1rem);
+--s-100: calc(8 / 16 * 1rem);
+--s-50: calc(4 / 16 * 1rem);
 ```
 
-I also found it handy to create classes based on the figma design local styles.
+I also found it handy to create media queries to dynamically change CSS custom properties.
 
 ```scss
+@include mobile-media-query(768px) {
+  html {
+    --fz-1: calc(48 / 16 * 1rem);
+    --fz-2: calc(36 / 16 * 1rem);
+    --fz-3: calc(14 / 16 * 1rem);
+  }
+}
+
+@include mobile-media-query(1150px) {
+  html {
+    --fz-1: calc(64 / 16 * 1rem);
+    --fz-2: calc(40 / 16 * 1rem);
+    --fz-3: calc(16 / 16 * 1rem);
+    --fz-4: calc(18 / 16 * 1rem);
+  }
+}
 ```
 
 ### Continued development
