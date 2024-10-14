@@ -20,7 +20,7 @@ html {
   --cyan-hover : hsl(192, 54%, 64%);
   --cyan-300: hsl(192, 90%, 77%);
   --cyan-600: hsl(192, 37%, 48%);
-  --cyan-600-overlay: hsla(192, 37%, 48%, .8);
+  --cyan-600-overlay: hsla(192, 37%, 48%, .9);
   
   --ff-body: "Red Hat Display", system-ui;
   
@@ -260,19 +260,13 @@ header {
   padding: var(--s-800) var(--s-300);
   width: 100%;
   height: rem(392px);
-  background-image: url(../images/mobile/image-footer.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--cyan-600-overlay);
-  }
+  background:
+  linear-gradient(
+    var(--cyan-600-overlay),
+    var(--cyan-600-overlay)),
+    top center / cover
+    no-repeat
+    url(../images/mobile/image-footer.jpg);
 
   > .number {
     position: absolute;
@@ -338,8 +332,13 @@ header {
 
   .footer__content {
     height: rem(320px);
-    background-image: url(../images/tablet/image-footer.jpg);
-    background-position: top center;
+    background:
+    linear-gradient(
+      var(--cyan-600-overlay),
+      var(--cyan-600-overlay)),
+      top center / cover
+      no-repeat
+      url(../images/tablet/image-footer.jpg);
   }
 }
 /* #endregion Tablet 768px */
@@ -403,7 +402,13 @@ header {
     grid-auto-flow: column;
     place-content: space-evenly;
     height: rem(312px);
-    background-image: url(../images/desktop/image-footer.jpg);
+    background:
+    linear-gradient(
+      var(--cyan-600-overlay),
+      var(--cyan-600-overlay)),
+      top center / cover
+      no-repeat
+      url(../images/desktop/image-footer.jpg);
   }
   
   .footer__title {
