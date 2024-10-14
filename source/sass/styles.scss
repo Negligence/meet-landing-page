@@ -261,12 +261,10 @@ header {
   width: 100%;
   height: rem(392px);
   background:
-  linear-gradient(
-    var(--cyan-600-overlay),
-    var(--cyan-600-overlay)),
-    top center / cover
-    no-repeat
-    url(../images/mobile/image-footer.jpg);
+  linear-gradient(var(--cyan-600-overlay),var(--cyan-600-overlay)),
+  top center / cover
+  no-repeat
+  url(../images/mobile/image-footer.jpg);
 
   > .number {
     position: absolute;
@@ -333,12 +331,10 @@ header {
   .footer__content {
     height: rem(320px);
     background:
-    linear-gradient(
-      var(--cyan-600-overlay),
-      var(--cyan-600-overlay)),
-      top center / cover
-      no-repeat
-      url(../images/tablet/image-footer.jpg);
+    linear-gradient(var(--cyan-600-overlay),var(--cyan-600-overlay)),
+    top center / cover
+    no-repeat
+    url(../images/tablet/image-footer.jpg);
   }
 }
 /* #endregion Tablet 768px */
@@ -403,12 +399,10 @@ header {
     place-content: space-evenly;
     height: rem(312px);
     background:
-    linear-gradient(
-      var(--cyan-600-overlay),
-      var(--cyan-600-overlay)),
-      top center / cover
-      no-repeat
-      url(../images/desktop/image-footer.jpg);
+    linear-gradient(var(--cyan-600-overlay),var(--cyan-600-overlay)),
+    top center / cover
+    no-repeat
+    url(../images/desktop/image-footer.jpg);
   }
   
   .footer__title {
